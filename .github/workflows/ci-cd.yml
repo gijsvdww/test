@@ -42,7 +42,7 @@ jobs:
         run: |
           echo "${DIGITALOCEAN_ACCESS_TOKEN}" | docker login registry.digitalocean.com -u "${DIGITALOCEAN_USERNAME}" --password-stdin
 
-      # Build Docker Image with Git commit hash as tag
+      # Build Docker Image with Git commit hash as ta
       - name: Build Docker image
         env:
           COMMIT_HASH: ${{ github.sha }}
