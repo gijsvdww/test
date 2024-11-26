@@ -1,0 +1,18 @@
+customerID tabel- CustomerID, customername, customeremail,
+productID tabel- productID, productname, productprice
+orderID tabel- orderid, customerID, productID, quantity, price, date
+
+studentid: primary key
+firstname: NOT NULL
+lastname: not null
+email: not null, unique, check for valid email
+birthdate: not null, check for valid birthdate(not before 1900)
+
+courseID: primary key
+coursename: not null, unique
+credits: default, check for valid credit(not to high)
+
+enrollmentid: primary key
+studentid: foreign key, not null
+courseid: foreign key, not null
+enrollmentdate: not null, check for valid date(after birthdate)
