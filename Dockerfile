@@ -1,12 +1,14 @@
-FROM ubuntu:latest
-LABEL authors="worpg00"
-
-ENTRYPOINT ["top", "-b"]
-
 FROM python:3.8-slim
 
-COPY * / devops-git/
+LABEL authors="worpg00"
 
-WORKDIR /devops-git
+WORKDIR /TestApi
+
+COPY  requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
 
 CMD ["python", "App.py"]
