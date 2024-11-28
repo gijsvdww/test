@@ -1,0 +1,31 @@
+# Terraform state files (bevatten gevoelige informatie zoals API-tokens en Kubernetes-configs)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Lock file for Terraform (specifiek voor je machine en omgeving)
+.terraform.lock.hcl
+
+# Terraform working directory
+.terraform/
+
+# Personal overrides (indien gebruikt)
+*.tfvars
+*.tfvars.json
+
+# Kubernetes kubeconfig bestanden
+kubeconfig
+kubeconfig.*
+
+# IDE-specifieke bestanden (optioneel)
+.vscode/
+.idea/
+*.swp
+*.iml
+
+# Logbestanden en tijdelijke bestanden
+*.log
+*.tmp
+*.bak
+
+# Cloudprovider-specifieke configuraties (indien aanwezig)
+.doit/
